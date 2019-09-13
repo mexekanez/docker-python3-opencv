@@ -1,6 +1,8 @@
 FROM python:3.7
 MAINTAINER Josip Janzic <josip@jjanzic.com>
 
+ENV OPENCV4NODEJS_DISABLE_AUTOBUILD=1
+
 RUN apt-get update \
     && apt-get install -y \
         build-essential \
@@ -53,3 +55,11 @@ RUN wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip \
 RUN ln -s \
   /usr/local/python/cv2/python-3.7/cv2.cpython-37m-x86_64-linux-gnu.so \
   /usr/local/lib/python3.7/site-packages/cv2.so
+
+RUN sudo apt-get install -y libopencv-dev
+
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+
+RUN apt-get install -y nodejs
+
+RUN npm i opencv4nodejs
