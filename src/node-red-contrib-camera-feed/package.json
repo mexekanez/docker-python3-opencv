@@ -1,0 +1,15 @@
+{
+  "name": "node-red-contrib-camera-feed",
+  "version": "0.1.0",
+  "description": "Capture feed from host's camera",
+  "author": "Manuel Aljibes Rosas <manuelaljibesrosas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "opencv4nodejs": "5.2.0"
+  },
+  "node-red": {
+    "nodes": {
+      "camera-feed": "camera-feed.js"
+    }
+  }
+}

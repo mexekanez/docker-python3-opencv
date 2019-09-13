@@ -1,0 +1,44 @@
+<script type="text/javascript">
+  RED.nodes.registerType('va-object-detector', {
+    category: 'function',
+    color: 'white',
+    defaults: {
+      model: {
+        value: 'ssd_inception_v2',
+      },
+      processor: {
+        value: 'CPU',
+      },
+      confidence: {
+        value:  0.65,
+      },
+      threshold: {
+        value: 0.3,
+      },
+      name: {
+        value: '',
+      },
+    },
+    inputs: 1,
+    outputs: 1,
+    label: function() {
+      return this.name || 'va-object-detector';
+    },
+  });
+</script>
+
+<script type="text/x-red" data-template-name="va-object-detector">
+  <div class="form-row">
+    <label for="node-input-name">
+      <i class="icon-tag"></i>
+      name
+    </label>
+    <input type="text" id="node-input-name" placeholder="name" />
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="va-object-detector">
+  <p>
+    Object detector
+  </p>
+</script>

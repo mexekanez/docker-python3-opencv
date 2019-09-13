@@ -1,0 +1,21 @@
+{
+  "name": "node-red-contrib-va-object-detector",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/TopKamera/va_object_detect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/TopKamera/va_object_detect/issues"
+  },
+  "homepage": "https://gitlab.com/TopKamera/va_object_detect#readme",
+  "node-red": {
+    "nodes": {
+      "va-object-detector": "va-object-detector.js"
+    }
+  }
+}

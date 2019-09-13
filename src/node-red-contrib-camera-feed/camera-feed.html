@@ -1,0 +1,53 @@
+<script type="text/javascript">
+  RED.nodes.registerType('camera-feed', {
+    category: 'input',
+    color: 'white',
+    defaults: {
+      devicePort: {
+        value: 0,
+      },
+      fps: {
+        value: 20,
+      },
+      name: {
+        value: '',
+      },
+    },
+    inputs: 0,
+    outputs: 1,
+    icon: 'file.png',
+    label: function() {
+      return this.name || 'camera-feed';
+    },
+  });
+</script>
+
+<script type="text/x-red" data-template-name="camera-feed">
+  <div class="form-row">
+    <label for="node-input-name">
+      <i class="icon-tag"></i>
+      name
+    </label>
+    <input type="text" id="node-input-name" placeholder="name" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-device-port">
+      <i class="icon-tag"></i>
+      device port
+    </label>
+    <input type="number" id="node-input-device-port" placeholder="0" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-fps">
+      <i class="icon-tag"></i>
+      frames per second
+    </label>
+    <input type="number" id="node-input-fps" placeholder="20" />
+  </div>
+</script>
+
+<script type="text/x-red" data-help-name="camera-feed">
+  <p>
+    Capture feed from host's camera
+  </p>
+</script>
